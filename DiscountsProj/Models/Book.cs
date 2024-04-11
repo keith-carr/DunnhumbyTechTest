@@ -1,8 +1,13 @@
 namespace DunnhumbyTechTest.Models
 {
-    public class Book
+    public class Book : Product
     {
-        public int SeriesId {get; set;}
-        public decimal Price {get; set;}
+        public Book(int setId, int bookId, string title, decimal price) 
+            : base(bookId, title, price)
+        {
+            SetId = setId;
+        }
+
+        public int SetId {get; set;}
     }
 }
